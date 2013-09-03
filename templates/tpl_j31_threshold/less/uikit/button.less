@@ -1,0 +1,163 @@
+/* Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+/*
+ * Button component
+ *
+ ========================================================================== */
+
+
+/* Component
+ ========================================================================== */
+
+.hook-button() {
+	font-weight: inherit;
+}
+
+.hook-button-hover() {
+	background-image: -webkit-linear-gradient(top, @theme_global-default-gradient-top, @theme_global-default-gradient-bottom);
+	background-image: linear-gradient(to bottom, @theme_global-default-gradient-top, @theme_global-default-gradient-bottom);
+	box-shadow: inset 0 1px 0 @theme_global-default-box-shadow, 0 1px 1px @theme_global-default-active-box-shadow;
+	-webkit-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+}
+
+.hook-button-active() {
+	background-image: none;
+	box-shadow: inset 0 3px 9px @theme_global-default-active-box-shadow;
+	-webkit-transition: none;
+	transition: none;
+}
+
+
+/* Color modifiers
+ ========================================================================== */
+
+/*
+ * Modifier: `uk-button-primary`
+ */
+
+.hook-button-primary() {
+	box-shadow: inset 0 0 8px @theme_global-primary-box-shadow;
+	text-shadow: 0 1px 1px @theme_global-primary-text-shadow;
+}
+
+.hook-button-primary-hover() {
+	background-image: -webkit-linear-gradient(top, @theme_global-primary-gradient-top, @theme_global-primary-gradient-bottom);
+	background-image: linear-gradient(to bottom, @theme_global-primary-gradient-top, @theme_global-primary-gradient-bottom);
+	box-shadow: inset 0 1px 0 @theme_global-default-box-shadow, 0 1px 1px @theme_global-default-active-box-shadow;
+	text-shadow: 0 -1px 1px @theme_global-primary-text-shadow;
+}
+
+.hook-button-primary-active() {
+	box-shadow: inset 0 3px 9px @theme_global-primary-active-box-shadow;
+	background-image: none;
+}
+
+/*
+ * Modifier: `uk-button-success`
+ */
+
+.hook-button-success() {
+	box-shadow: inset 0 0 8px @theme_global-success-box-shadow;
+	text-shadow: 0 1px 1px @theme_global-success-text-shadow;
+}
+
+.hook-button-success-hover() {
+	background-image: -webkit-linear-gradient(top, @theme_global-success-gradient-top, @theme_global-success-gradient-bottom);
+	background-image: linear-gradient(to bottom, @theme_global-success-gradient-top, @theme_global-success-gradient-bottom);
+	box-shadow: inset 0 1px 0 @theme_global-default-box-shadow, 0 1px 1px @theme_global-default-active-box-shadow;
+	text-shadow: 0 -1px 1px @theme_global-success-text-shadow;
+}
+
+.hook-button-success-active() {
+	background-image: none;
+	box-shadow: inset 0 3px 9px @theme_global-success-active-box-shadow;
+}
+
+/*
+ * Modifier: `uk-button-danger`
+ */
+
+.hook-button-danger() {
+	box-shadow: inset 0 0 8px @theme_global-danger-box-shadow;
+	text-shadow: 0 1px 1px @theme_global-danger-text-shadow;
+}
+
+.hook-button-danger-hover() {
+	background-image: -webkit-linear-gradient(top, @theme_global-danger-gradient-top, @theme_global-danger-gradient-bottom);
+	background-image: linear-gradient(to bottom, @theme_global-danger-gradient-top, @theme_global-danger-gradient-bottom);
+	box-shadow: inset 0 1px 0 @theme_global-default-box-shadow, 0 1px 1px @theme_global-default-active-box-shadow;
+	text-shadow: 0 -1px 1px @theme_global-danger-text-shadow;
+}
+
+.hook-button-danger-active() {
+	background-image: none;
+	box-shadow: inset 0 3px 9px @theme_global-danger-active-box-shadow;
+}
+
+
+/* Disabled state
+ ========================================================================== */
+
+.hook-button-disable() {
+	background-image: none !important;
+	box-shadow: none !important;
+	text-shadow: none !important;
+}
+
+
+/* Modifier: `uk-button-link`
+ ========================================================================== */
+
+.hook-button-link() {
+	-webkit-transition: all 0.1s ease-in-out;
+	transition: all 0.1s ease-in-out;
+	box-shadow: none;
+}
+
+
+/* Size modifiers
+ ========================================================================== */
+
+.hook-button-large() {}
+
+
+/* Sub-object `uk-button-group`
+ ========================================================================== */
+
+/*
+ * Set border
+ */
+
+.uk-button-group > .uk-button:not(:first-child):not(:last-child),
+.uk-button-group > div:not(:first-child):not(:last-child) .uk-button {
+	border-left: 1px solid rgba(0,0,0,0.15);
+	border-right: 1px solid rgba(0,0,0,0.15);
+}
+
+.uk-button-group > .uk-button:first-child,
+.uk-button-group > div:first-child .uk-button {
+	border-right: 1px solid rgba(0,0,0,0.15);
+}
+
+.uk-button-group > .uk-button:last-child,
+.uk-button-group > div:last-child .uk-button {
+	border-left: 1px solid rgba(0,0,0,0.15);
+}
+
+/*
+ * Collapse border
+ */
+
+.uk-button-group > .uk-button:nth-child(n+2),
+.uk-button-group > div:nth-child(n+2) .uk-button { margin-left: -1px; }
+
+/*
+ * Create position context to superimpose the successor elements border
+ * Known issue: If you use an `a` element as button and an icon inside,
+ * the active state will not work if you click the icon inside the button
+ * Workaround: Just use a `button` or `input` element as button
+ */
+
+.uk-button-group .uk-button:hover,
+.uk-button-group .uk-button:active { position: relative; }

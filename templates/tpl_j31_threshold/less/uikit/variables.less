@@ -1,0 +1,590 @@
+/* Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+/*
+ * Variables component
+ *
+ ========================================================================== */
+
+
+/* Global variables
+ ========================================================================== */
+
+/*
+ * Text
+ */
+
+@global-color:										#88898e;
+
+@global-muted-color:								darken(@global-color, 10%);
+@global-contrast-color:								#fff;
+
+@global-link-color:									#b1c47c;
+@global-link-hover-color:							lighten(@global-link-color, 25%);
+
+@global-font-size:									15px;
+@global-line-height:								22px;
+
+/*
+ * Backgrounds & Borders
+ */
+
+@global-background:									#2b2c30;
+
+@global-primary-background:							#a4b575;
+@global-success-background:							#76c38b;
+@global-warning-background:							#eba36e;
+@global-danger-background:							#ca6868;
+
+@global-border:										rgba(255,255,255,0.07);
+
+/*
+ * Spacings
+ */
+
+@global-margin:										20px;
+@global-large-margin:								20px;
+@global-grid-gutter:								20px;
+@global-grid-large-gutter:							30px;
+
+/*
+ * Heights
+ */
+
+@global-height:										35px;
+@global-mini-height:								20px;
+@global-small-height:								25px;
+@global-large-height:								45px;
+
+
+/* Component variables
+ ========================================================================== */
+
+/*
+ * Base
+ */
+
+@base-body-font-family:								'Open Sans';
+@base-heading-font-family:							'Open Sans';
+
+@base-body-font-weight:								300;
+@base-heading-font-weight:							300;
+
+@base-em-color:										@theme_global-secondary-color;
+@base-ins-background:								rgba(255,255,255,0.07);
+@base-mark-color:									#fff5cb;
+@base-mark-background:								rgba(255,220,112,0.1);
+@base-selection-background:							fade(@global-primary-background, 50%);
+
+@base-h1-font-size:									round(@global-font-size * 3.2); // 48px
+@base-h1-line-height:								round(@base-h1-font-size * 1.08); // 52px
+@base-h2-font-size:									round(@global-font-size * 2.4); // 36px
+@base-h2-line-height:								round(@base-h2-font-size * 1.11); // 40px
+@base-h3-font-size:									round(@global-font-size * 1.86); // 28px
+@base-h3-line-height:								round(@base-h3-font-size * 1.21); // 34px
+@base-h4-font-size:									round(@global-font-size * 1.46); // 22px
+@base-h4-line-height:								round(@base-h4-font-size * 1.18); // 26px
+@base-heading-color:								@theme_global-light-color;
+
+@base-pre-background:								@theme_global-dark-background;
+
+@base-code-color:									#2fcd79;
+
+/*
+ * Panel
+ */
+
+@panel-title-color:									@theme_global-light-color;
+@panel-title-font-weight:							300;
+@panel-title-font-size:								@base-h3-font-size;
+@panel-title-line-height:							@base-h3-line-height;
+
+@panel-box-padding:									20px;
+@panel-box-title-color:								@panel-title-color;
+
+@panel-box-background:								@theme_global-light-background;
+
+@panel-box-primary-background:						@global-primary-background;
+@panel-box-primary-color:							lighten(@global-link-color, 30%);
+@panel-box-primary-title-color:						#fff;
+
+@panel-box-secondary-background:					@theme_global-secondary-background;
+@panel-box-secondary-color:							lighten(@theme_global-secondary-color, 30%);
+@panel-box-secondary-title-color:					#fff;
+
+@panel-header-title-padding:						15px;
+@panel-header-title-color:							@panel-title-color;
+
+@panel-space-padding:								40px;
+
+/*
+ * Article
+ */
+
+@article-title-font-size:							@base-h1-font-size;
+@article-title-line-height:							@base-h1-line-height;
+@article-title-font-weight:							inherit;
+
+@article-meta-font-size:							round(@global-font-size * 0.93); // 14px
+
+/*
+ * Comment
+ */
+
+@comment-list-margin-top:							@global-margin + 10px;
+
+/*
+ * Nav
+ */
+
+@nav-navbar-color:									lighten(@global-link-color, 30%);
+@nav-navbar-hover-background:						desaturate(darken(@global-primary-background, 5%), 5%);
+@nav-navbar-hover-color:							lighten(@global-link-color, 40%);
+@nav-navbar-header-color:							fade(darken(desaturate(@global-link-color, 15%), 45%), 50%);
+@nav-navbar-nested-color:							lighten(@global-link-color, 20%);
+@nav-navbar-nested-hover-color:						@nav-navbar-hover-color;
+
+@nav-side-hover-background:							@theme_global-dark-background;
+
+@nav-search-color:									lighten(@global-link-color, 30%);
+@nav-search-active-background:						desaturate(darken(@global-primary-background, 5%), 5%);
+@nav-search-active-color:							lighten(@global-link-color, 40%);
+@nav-search-header-color:							fade(darken(desaturate(@global-link-color, 15%), 45%), 50%);
+@nav-search-nested-color:							lighten(@global-link-color, 20%);
+@nav-search-nested-hover-color:						@nav-search-active-color;
+
+@nav-offcanvas-color:								fade(@global-contrast-color, 80%);
+@nav-offcanvas-hover-background:					darken(@theme_global-light-background, 2%);
+@nav-offcanvas-hover-color:							@global-link-hover-color;
+@nav-offcanvas-active-background:					@theme_global-light-background;
+@nav-offcanvas-active-color:						@global-link-color;
+@nav-offcanvas-header-color:						@theme_global-light-color;
+@nav-offcanvas-divider-border:						@theme_global-light-background;
+@nav-offcanvas-nested-color:						@global-color;
+@nav-offcanvas-nested-hover-color:					@global-link-color;
+
+/*
+ * Navbar
+ */
+
+@navbar-nav-font-weight: 							inherit;
+@navbar-nav-font-family: 							inherit;
+
+@navbar-background:									@theme_global-dark-background;
+@navbar-link-color:									@global-link-color;
+@navbar-link-hover-color:							@global-link-hover-color;
+
+@navbar-nav-height:									55px;
+@navbar-nav-padding-horizontal:						20px;
+@navbar-nav-color:									@global-color;
+@navbar-nav-hover-background:						rgba(0,0,0,0);
+@navbar-nav-onclick-background:						darken(@global-primary-background, 5%);
+@navbar-nav-hover-color:							@global-contrast-color;
+@navbar-nav-onclick-color:							@global-contrast-color;
+@navbar-nav-active-background:						none;
+@navbar-nav-active-color:							@global-contrast-color;
+@nav-navbar-divider-border:							fade(@global-link-hover-color, 30%);
+
+@navbar-brand-color:								fade(@global-contrast-color, 70%);
+@navbar-brand-hover-color:							@global-contrast-color;
+
+/*
+ * Subnav
+ */
+
+@subnav-pill-hover-background:						@theme_global-light-background;
+@subnav-pill-hover-color:							@global-link-hover-color;
+
+/*
+ * Breadcrumb
+ */
+
+@breadcrumb-divider:								"|";
+@breadcrumb-divider-margin:							14px;
+
+/*
+ * Pagination
+ */
+
+@pagination-background:								@theme_global-light-background;
+@pagination-color:									@global-color;
+@pagination-hover-background:						lighten(@theme_global-light-background, 3%);
+@pagination-hover-color:							@theme_global-light-color;
+@pagination-onclick-background:						lighten(@theme_global-light-background, 6%);
+@pagination-onclick-color:							@global-contrast-color;
+
+@pagination-disabled-background:					@theme_global-light-background;
+@pagination-disabled-color:							@global-muted-color;
+
+/*
+ * Tab
+ */
+
+@tab-border:										@global-border;
+@tab-hover-border:									@theme_global-light-background;
+@tab-hover-background:								@theme_global-light-background;
+@tab-active-border:									@global-border;
+@tab-active-color:									@global-contrast-color;
+
+/*
+ * List
+ */
+
+@list-striped-background:							@theme_global-light-background;
+
+/*
+ * Table
+ */
+
+@table-striped-background:							@theme_global-light-background;
+
+@table-hover-background:							lighten(@theme_global-light-background, 3%);
+
+/*
+ * Form
+ */
+
+@form-background:									rgba(255,255,255,0.07);
+@form-focus-background:								rgba(255,255,255,0.14);
+@form-focus-color:									@theme_global-light-color;
+@form-disabled-background:							fade(@theme_global-light-background, 30%);
+
+@form-placeholder-color:							@global-color;
+
+@form-danger-background:							@global-danger-background;
+@form-danger-color:									lighten(@global-danger-background, 30%);
+
+@form-success-background:							@global-success-background;
+@form-success-color:								lighten(@global-success-background, 30%);
+
+/*
+ * Button
+ */
+
+@button-height:										@global-height;
+@button-line-height:								@global-height;
+
+@button-background:									lighten(@theme_global-light-background, 5%);
+@button-color:										@theme_global-light-color;
+@button-hover-background:							lighten(@theme_global-light-background, 10%);
+@button-hover-color:								@global-contrast-color;
+@button-active-background:							lighten(@theme_global-light-background, 9%);
+@button-active-color:								@theme_global-light-color;
+
+@button-primary-background:							@global-primary-background;
+@button-primary-hover-background:					darken(@global-primary-background, 4%);
+@button-primary-active-background:					darken(@global-primary-background, 8%);
+
+@button-success-background:							@global-success-background;
+@button-success-hover-background:					darken(@global-success-background, 4%);
+@button-success-active-background:					darken(@global-success-background, 8%);
+
+@button-danger-background:							@global-danger-background;
+@button-danger-hover-background:					darken(@global-danger-background, 4%);
+@button-danger-active-background:					darken(@global-danger-background, 8%);
+
+@button-disabled-background:						@theme_global-light-background;
+@button-disabled-color:								@global-muted-color;
+
+@button-link-color:									@global-link-color;
+@button-link-hover-color:							@global-link-hover-color;
+@button-link-disabled-color:						@global-muted-color;
+
+/*
+ * Icon
+ */
+
+@icon-button-width: 								50px;
+@icon-button-height: 								@icon-button-width;
+@icon-button-border-radius: 						4px;
+
+@icon-button-font-size: 							@icon-button-width * 0.7;
+
+@icon-button-color: 								darken(@global-background, 3%);
+@icon-button-background:							@theme_global-light-background;
+@icon-button-hover-color: 							@global-contrast-color;
+@icon-button-hover-background:						@theme_global-secondary-background;
+@icon-button-active-color: 							fade(@global-contrast-color, 70%);
+@icon-button-active-background:						darken(@theme_global-secondary-background, 4%);
+
+/*
+ * Close
+ */
+
+@close-alt-background:								@theme_global-light-background;
+
+/*
+ * Badge
+ */
+
+@badge-padding-horizontal:							5px;
+@badge-font-size:									round(@global-font-size * 0.8); // 12px
+@badge-font-weight:									normal;
+@badge-line-height:									round(@badge-font-size * 1.66); // 255px
+@badge-text-transform:								uppercase;
+
+@badge-notification-font-size:						round(@global-font-size * 0.85); // 12px
+@badge-notification-line-height:					round(@badge-notification-font-size * 1.5); // 18px
+
+/*
+ * Alert
+ */
+
+@alert-background:									@theme_global-info-background;
+@alert-color:										@global-contrast-color;
+
+@alert-success-background:							@global-success-background;
+@alert-success-color:								@global-contrast-color;
+
+@alert-warning-background:							@global-warning-background;
+@alert-warning-color:								@global-contrast-color;
+
+@alert-danger-background:							@global-danger-background;
+@alert-danger-color:								@global-contrast-color;
+
+/*
+ * Thumbnail
+ */
+
+@thumbnail-padding:									0px;
+@thumbnail-background:								@theme_global-light-background;
+@thumbnail-hover-background:						lighten(@theme_global-light-background, 5%);
+
+/*
+ * Overlay
+ */
+
+@overlay-area-background:							fade(@global-primary-background, 80%);
+@overlay-caption-background:						fade(@theme_global-dark-background, 80%);
+
+/*
+ * Progress
+ */
+
+@progress-background:								@theme_global-light-background;
+
+@progress-bar-background:							@global-primary-background;
+@progress-bar-color:								@global-contrast-color;
+
+@progress-bar-success-background:					@global-success-background;
+@progress-bar-warning-background:					@global-warning-background;
+@progress-bar-danger-background:					@global-danger-background;
+
+/*
+ * Search
+ */
+
+@search-width:										@search-padding;
+@search-focus-width:								150px;
+@search-border: 									rgba(0,0,0,0);
+
+@search-color:										@global-color;
+@search-placeholder-color:							transparent;
+
+@search-icon-size: 									18px;
+@search-icon-color:									@global-muted-color;
+
+@search-close-size: 								18px;
+@search-close-icon: 								"\f057";
+@search-close-color:								@global-muted-color;
+
+/*
+ * Dropdown
+ */
+
+@dropdown-padding:									20px;
+@dropdown-small-padding:							10px;
+
+@dropdown-background:								@theme_global-dark-background;
+
+@dropdown-navbar-color:								lighten(@global-link-color, 30%);
+@dropdown-navbar-background:						@global-primary-background;
+@dropdown-navbar-animation:							uk-scale-up;
+
+@dropdown-search-background:						@global-primary-background;
+
+/*
+ * Modal
+ */
+
+@modal-background:									fade(@theme_global-dark-background, 80%);
+
+/*
+ * Off-canvas
+ */
+
+@offcanvas-background:								fade(@global-background, 50%);
+
+@offcanvas-bar-background:							darken(@global-background, 5%);
+
+@offcanvas-panel-color:								@global-color;
+@offcanvas-panel-title-color:						@theme_global-light-color;
+@offcanvas-panel-link-color:						@global-link-color;
+@offcanvas-panel-link-hover-color:					@global-link-hover-color;
+
+/*
+ * Tooltip
+ */
+
+@tooltip-background:								@theme_global-secondary-background;
+@tooltip-color:										lighten(@theme_global-secondary-color, 30%);
+
+/*
+ * Text
+ */
+
+@text-small-font-size:								round(@global-font-size * 0.78); // 11px
+@text-small-line-height:							round(@text-small-font-size * 1.45); // 16px
+@text-large-font-size:								round(@global-font-size * 1.28); // 18px
+@text-large-line-height:							round(@text-large-font-size * 1.33); // 24px
+
+@text-muted-color:									@global-muted-color;
+@text-info-color:									@theme_global-info-background;
+@text-success-color:								@global-success-background;
+@text-warning-color:								@global-warning-background;
+@text-danger-color:									@global-danger-background;
+
+/*
+ * Utility
+ */
+
+@utility-container-large-max-width:					1240px;
+
+
+/* Theme global variables
+ ========================================================================== */
+
+/*
+* Backgrounds & Borders
+*/
+
+@theme_global-light-background:						lighten(desaturate(@global-background, 1%), 6%);
+@theme_global-dark-background:						darken(@theme_global-light-background, 9%);
+
+@theme_global-secondary-background:					#c8765d;
+@theme_global-secondary-color:						#df795a;
+
+@theme_global-light-color:							lighten(@global-color, 25%);
+
+@theme_global-info-background:						#77b1cf;
+
+/*
+ * Text-shadows
+ */
+
+@theme_global-primary-text-shadow:					darken(@global-primary-background, 6%);
+@theme_global-secondary-text-shadow:				darken(@theme_global-secondary-color, 6%);
+@theme_global-success-text-shadow:					darken(@global-success-background, 6%);
+@theme_global-warning-text-shadow:					darken(@global-warning-background, 6%);
+@theme_global-danger-text-shadow:					darken(@global-danger-background, 6%);
+@theme_global-info-text-shadow:						darken(@theme_global-info-background, 6%);
+
+/*
+ * Box-shadows
+ */
+
+@theme_global-default-box-shadow:					rgba(255,255,255,0.05);
+@theme_global-default-active-box-shadow:			rgba(0,0,0,0.2);
+
+@theme_global-secondary-box-shadow:					darken(@theme_global-secondary-background, 8%);
+@theme_global-secondary-active-box-shadow:			darken(@theme_global-secondary-background, 15%);
+
+@theme_global-primary-box-shadow:					darken(@global-primary-background, 8%);
+@theme_global-primary-active-box-shadow:			darken(@global-primary-background, 15%);
+
+@theme_global-success-box-shadow:					darken(@global-success-background, 8%);
+@theme_global-success-active-box-shadow:			darken(@global-success-background, 15%);
+
+@theme_global-warning-box-shadow:					darken(@global-warning-background, 8%);
+
+@theme_global-danger-box-shadow:					darken(@global-danger-background, 8%);
+@theme_global-danger-active-box-shadow:				darken(@global-danger-background, 15%);
+
+@theme_global-info-box-shadow:						darken(@theme_global-info-background, 8%);
+
+/*
+ * Gradients
+ */
+
+@theme_global-default-gradient-top:					lighten(@theme_global-light-background, 8%);
+@theme_global-default-gradient-bottom:				lighten(@theme_global-light-background, 5%);
+
+@theme_global-primary-gradient-top:					@global-primary-background;
+@theme_global-primary-gradient-bottom:				darken(@global-primary-background, 6%);
+
+@theme_global-success-gradient-top:					@global-success-background;
+@theme_global-success-gradient-bottom:				darken(@global-success-background, 6%);
+
+@theme_global-warning-gradient-top:					@global-warning-background;
+@theme_global-warning-gradient-bottom:				darken(@global-warning-background, 6%);
+
+@theme_global-danger-gradient-top:					@global-danger-background;
+@theme_global-danger-gradient-bottom:				darken(@global-danger-background, 6%);
+
+
+/* Theme component variables
+ ========================================================================== */
+
+/*
+ * Base
+ */
+
+@theme_base-h4-color: 								@theme_global-secondary-color;
+@theme_base-h6-color: 								@global-color;
+
+/*
+ * Panel
+ */
+
+@theme_panel-box-padding-large:						40px;
+
+@theme_panel-box-primary-button-background:			#fff;
+@theme_panel-box-primary-button-hover-background:	darken(desaturate(@global-primary-background, 5%), 30%);
+@theme_panel-box-primary-button-color:				@global-primary-background;
+@theme_panel-box-primary-button-hover-color:		@global-contrast-color;
+
+@theme_panel-box-secondary-button-background:		#fff;
+@theme_panel-box-secondary-button-hover-background:	darken(desaturate(@theme_global-secondary-background, 5%), 30%);
+@theme_panel-box-secondary-button-color:			@theme_global-secondary-background;
+@theme_panel-box-secondary-button-hover-color:		@global-contrast-color;
+
+/*
+ * Nav
+ */
+
+@theme_nav-sub-link-padding-top:					5px;
+@theme_nav-sub-link-padding-bottom:					@theme_nav-sub-link-padding-top;
+@theme_nav-sub-icon:								"\f0da";
+
+@theme_nav-side-focus-box-shadow:					inset 0 1px 2px rgba(0,0,0,0.2);
+
+/*
+ * Comment
+ */
+
+@theme_comment-padding:								20px;
+@theme_comment-background:							@theme_global-light-background;
+
+/*
+ * Breadcrumb
+ */
+
+@theme_breadcrumb-divider-color:					@global-border;
+
+/*
+ * Search
+ */
+
+@theme_search-placeholder-focus-color:				@global-muted-color;
+
+/*
+ * Badge
+ */
+
+@theme_badge-border-radius:							1px;
+
+/*
+ * Thumbnail
+ */
+
+@theme_thumbnail-box-shadow:						fade(@theme_global-dark-background, 50%);
+@theme_thumbnail-hover-box-shadow:					fade(@theme_global-dark-background, 90%);

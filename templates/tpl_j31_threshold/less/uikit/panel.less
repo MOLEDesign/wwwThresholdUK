@@ -1,0 +1,122 @@
+/* Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+/*
+ * Panel component
+ *
+ ========================================================================== */
+
+
+/* Component
+ ========================================================================== */
+
+
+/* Sub-object: `uk-panel-title`
+ ========================================================================== */
+
+.hook-panel-title() {}
+
+
+/* Sub-object: `uk-panel-badge`
+ ========================================================================== */
+
+.hook-panel-badge() {}
+
+
+/* Modifier: `uk-panel-box`
+ ========================================================================== */
+
+.hook-panel-box() {
+
+	.uk-panel-box { background: lighten(@panel-box-background, 3%); }
+
+}
+
+@media (min-width: @breakpoint-medium) {
+
+	.uk-panel-box { padding: @theme_panel-box-padding-large; }
+
+}
+
+/*
+ * Nav in panel
+ */
+
+.uk-panel-box .uk-nav-side { margin: 0; }
+
+/*
+ * Sub-modifier: `uk-panel-box-primary`
+ */
+
+.hook-panel-box-primary() {
+	box-shadow: inset 0 0 40px @theme_global-primary-box-shadow;
+	text-shadow: 0 1px 1px @theme_global-primary-text-shadow;
+
+	a {
+		color: @global-contrast-color;
+
+		&:hover { color: darken(@panel-box-primary-background, 40%); }
+	}
+
+	.uk-button {
+		background: @theme_panel-box-primary-button-background;
+		box-shadow: 0 1px 1px @theme_global-primary-box-shadow;
+		color: @theme_panel-box-primary-button-color;
+		text-shadow: none;
+
+		&:hover {
+			background: @theme_panel-box-primary-button-hover-background;
+			box-shadow: 0 1px 1px @theme_global-primary-box-shadow;
+			color: @theme_panel-box-primary-button-hover-color;
+			text-shadow: none;
+		}
+	}
+
+	.uk-badge {
+		background: @global-contrast-color;
+		box-shadow: 0 1px 1px @theme_global-primary-box-shadow;
+		color: darken(@global-primary-background, 20%);
+		text-shadow: none;
+	}
+}
+
+/*
+ * Sub-modifier: `uk-panel-box-secondary`
+ */
+
+.hook-panel-box-secondary() {
+	box-shadow: inset 0 0 40px @theme_global-secondary-box-shadow;
+	text-shadow: 0 1px 1px @theme_global-secondary-text-shadow;
+
+	a {
+		color: @global-contrast-color;
+
+		&:hover { color: darken(@panel-box-secondary-background, 40%); }
+	}
+
+	.uk-button {
+		background: @theme_panel-box-secondary-button-background;
+		box-shadow: 0 1px 1px @theme_global-secondary-box-shadow;
+		color: @theme_panel-box-secondary-button-color;
+		text-shadow: none;
+
+		&:hover {
+			background: @theme_panel-box-secondary-button-hover-background;
+			box-shadow: 0 1px 1px @theme_global-secondary-box-shadow;
+			color: @theme_panel-box-secondary-button-hover-color;
+			text-shadow: none;
+		}
+	}
+
+	.uk-badge {
+		background: @global-contrast-color;
+		box-shadow: 0 1px 1px @theme_global-secondary-box-shadow;
+		color: darken(@theme_global-secondary-background, 20%);
+		text-shadow: none;
+	}
+}
+
+
+/* Modifier: `uk-panel-header`
+ ========================================================================== */
+
+.hook-panel-header() {}

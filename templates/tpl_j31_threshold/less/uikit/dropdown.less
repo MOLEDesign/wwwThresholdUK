@@ -1,0 +1,92 @@
+/* Copyright (C) YOOtheme GmbH, YOOtheme Proprietary Use License (http://www.yootheme.com/license) */
+
+/*
+ * Dropdown component
+ *
+ ========================================================================== */
+
+
+/* Component
+ ========================================================================== */
+
+.hook-dropdown() {}
+
+.uk-dropdown .uk-nav { margin: -@dropdown-padding / 2; }
+
+
+/* Modifier: `uk-dropdown-navbar`
+ ========================================================================== */
+
+.hook-dropdown-navbar() {
+	box-shadow: inset 0 -8px 16px -4px @theme_global-primary-box-shadow;
+	text-shadow: 0 1px 1px @theme_global-primary-text-shadow;
+
+	.uk-panel a {
+		color: darken(@panel-box-primary-background, 30%);
+
+		&:hover { color: darken(@panel-box-primary-background, 40%); }
+	}
+
+	.uk-form select,
+	.uk-form textarea,
+	.uk-form input[type="text"],
+	.uk-form input[type="password"],
+	.uk-form input[type="datetime"],
+	.uk-form input[type="datetime-local"],
+	.uk-form input[type="date"],
+	.uk-form input[type="month"],
+	.uk-form input[type="time"],
+	.uk-form input[type="week"],
+	.uk-form input[type="number"],
+	.uk-form input[type="email"],
+	.uk-form input[type="url"],
+	.uk-form input[type="search"],
+	.uk-form input[type="tel"],
+	.uk-form input[type="color"] {
+		color: darken(@panel-box-primary-background, 30%) !important;
+		background: rgba(255,255,255,0.75);
+		box-shadow: 0 1px 0 rgba(0,0,0,0.05);
+
+		&:focus {
+			color: darken(@panel-box-primary-background, 40%) !important;
+			background: rgba(255,255,255,1);
+			box-shadow: 0 1px 1px rgba(0,0,0,0.13);
+		}
+	}
+
+	.uk-form :-ms-input-placeholder { color: @theme_panel-box-primary-button-color !important; } /* 1. */
+	.uk-form ::-moz-placeholder { color: @theme_panel-box-primary-button-color !important; }
+	.uk-form ::-webkit-input-placeholder { color: @theme_panel-box-primary-button-color !important; }
+
+	.uk-button {
+		background: @theme_panel-box-primary-button-background;
+		box-shadow: 0 1px 1px @theme_global-primary-box-shadow;
+		color: @theme_panel-box-primary-button-color;
+		text-shadow: none;
+
+		&:hover {
+			background: @theme_panel-box-primary-button-hover-background;
+			box-shadow: 0 1px 1px @theme_global-primary-box-shadow;
+			color: @theme_panel-box-primary-button-hover-color;
+			text-shadow: none;
+		}
+	}
+
+	a {
+		color: lighten(@panel-box-primary-background, 40%);
+
+		&:hover { color: @global-contrast-color; }
+	}
+}
+
+.uk-nav-navbar.uk-panel > li > a {
+	color: @dropdown-navbar-color;
+
+	&:hover { color: @global-contrast-color; }
+}
+
+
+/* Modifier: `uk-dropdown-search`
+ ========================================================================== */
+
+.hook-dropdown-search() {}
