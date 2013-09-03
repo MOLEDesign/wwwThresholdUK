@@ -394,3 +394,6 @@ configuration.php
 index.php
 joomla.xml
 *.txt
+.idea
+_notes
+.DS_Store
