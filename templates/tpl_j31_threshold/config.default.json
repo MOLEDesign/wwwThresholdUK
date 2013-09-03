@@ -8,12 +8,18 @@
 		"top-b": {
 			"panel": "uk-panel uk-panel-box"
 		},
+        "top-c": {
+            "panel": "uk-panel uk-panel-box"
+        },
 		"bottom-a": {
 			"panel": "uk-panel uk-panel-box"
 		},
 		"bottom-b": {
 			"panel": "uk-panel uk-panel-box"
 		},
+        "bottom-c": {
+            "panel": "uk-panel uk-panel-box"
+        },
 		"main-top": {
 			"panel": "uk-panel uk-panel-box"
 		},
@@ -50,6 +56,10 @@
 					"layout": "parallel",
 					"responsive": "medium"
 				},
+                "top-c": {
+                    "layout": "parallel",
+                    "responsive": "medium"
+                },
 				"bottom-a": {
 					"layout": "parallel",
 					"responsive": "medium"
@@ -58,6 +68,10 @@
 					"layout": "parallel",
 					"responsive": "medium"
 				},
+                "bottom-c": {
+                    "layout": "parallel",
+                    "responsive": "medium"
+                },
 				"main-top": {
 					"layout": "parallel",
 					"responsive": "medium"

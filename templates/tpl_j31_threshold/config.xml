@@ -30,9 +30,11 @@
             <rows label="Position">
                 <row>top-a</row>
                 <row>top-b</row>
+                <row>top-c</row>
                 <row>mosaic</row>
                 <row>bottom-a</row>
                 <row>bottom-b</row>
+                <row>bottom-c</row>
                 <row>main-top</row>
                 <row>main-bottom</row>
                 <row>sidebar-a</row>
@@ -85,8 +87,10 @@
                 <rows label="Position">
                     <row>top-a</row>
                     <row>top-b</row>
+                    <row>top-c</row>
                     <row>bottom-a</row>
                     <row>bottom-b</row>
+                    <row>bottom-c</row>
                     <row>main-top</row>
                     <row>main-bottom</row>
                 </rows>

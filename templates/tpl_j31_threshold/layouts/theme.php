@@ -82,15 +82,19 @@ include($this['path']->path('layouts:theme.config.php'));
 		<?php endif; ?>
 
 		<?php if ($this['widgets']->count('top-a')) : ?>
-		<section class="<?php echo $grid_classes['top-a']; ?>" data-uk-grid-match="{target:'> div > .uk-panel'}" data-uk-grid-margin><?php echo $this['widgets']->render('top-a', array('layout'=>$this['config']->get('grid.top-a.layout'))); ?></section>
+		    <section class="<?php echo $grid_classes['top-a']; ?>" data-uk-grid-match="{target:'> div > .uk-panel'}" data-uk-grid-margin><?php echo $this['widgets']->render('top-a', array('layout'=>$this['config']->get('grid.top-a.layout'))); ?></section>
 		<?php endif; ?>
 
 		<?php if ($this['widgets']->count('top-b')) : ?>
-		<section class="<?php echo $grid_classes['top-b']; ?>" data-uk-grid-match="{target:'> div > .uk-panel'}" data-uk-grid-margin><?php echo $this['widgets']->render('top-b', array('layout'=>$this['config']->get('grid.top-b.layout'))); ?></section>
+		    <section class="<?php echo $grid_classes['top-b']; ?>" data-uk-grid-match="{target:'> div > .uk-panel'}" data-uk-grid-margin><?php echo $this['widgets']->render('top-b', array('layout'=>$this['config']->get('grid.top-b.layout'))); ?></section>
 		<?php endif; ?>
 
+        <?php if ($this['widgets']->count('top-c')) : ?>
+            <section class="<?php echo $grid_classes['top-c']; ?>" data-uk-grid-match="{target:'> div > .uk-panel'}" data-uk-grid-margin><?php echo $this['widgets']->render('top-c', array('layout'=>$this['config']->get('grid.top-c.layout'))); ?></section>
+        <?php endif; ?>
+
 		<?php if ($this['widgets']->count('mosaic')) : ?>
-		<section class="tm-mosaic"><div class="uk-width-1-1"><?php echo $this['widgets']->render('mosaic'); ?></div></section>
+		    <section class="tm-mosaic"><div class="uk-width-1-1"><?php echo $this['widgets']->render('mosaic'); ?></div></section>
 		<?php endif; ?>
 
 		<?php if ($this['widgets']->count('main-top + main-bottom + sidebar-a + sidebar-b') || $this['config']->get('system_output', true)) : ?>
@@ -138,6 +142,10 @@ include($this['path']->path('layouts:theme.config.php'));
 		<?php if ($this['widgets']->count('bottom-b')) : ?>
 		<section class="<?php echo $grid_classes['bottom-b']; ?>" data-uk-grid-match="{target:'> div > .uk-panel'}" data-uk-grid-margin><?php echo $this['widgets']->render('bottom-b', array('layout'=>$this['config']->get('grid.bottom-b.layout'))); ?></section>
 		<?php endif; ?>
+
+        <?php if ($this['widgets']->count('bottom-c')) : ?>
+            <section class="<?php echo $grid_classes['bottom-c']; ?>" data-uk-grid-match="{target:'> div > .uk-panel'}" data-uk-grid-margin><?php echo $this['widgets']->render('bottom-c', array('layout'=>$this['config']->get('grid.bottom-c.layout'))); ?></section>
+        <?php endif; ?>
 
 		<?php if ($this['widgets']->count('footer + debug') || $this['config']->get('warp_branding', true) || $this['config']->get('totop_scroller', true)) : ?>
 		<footer class="tm-footer">

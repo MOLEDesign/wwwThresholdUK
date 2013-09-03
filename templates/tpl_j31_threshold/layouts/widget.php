@@ -15,7 +15,7 @@ foreach (array('mosaic', 'suffix', 'panel', 'class', 'badge', 'icon', 'display')
 }
 
 // Set default panel
-if ($panel == '' && in_array($widget->position, array('top-a', 'top-b', 'mosaic', 'bottom-a', 'bottom-b', 'main-top', 'main-bottom', 'sidebar-a', 'sidebar-b'))) {
+if ($panel == '' && in_array($widget->position, array('top-a', 'top-b', 'top-c', 'mosaic', 'bottom-a', 'bottom-b', 'bottom-c', 'main-top', 'main-bottom', 'sidebar-a', 'sidebar-b'))) {
     $panel = $this['config']->get("panel_default.{$widget->position}.panel", '');
 }
 // Set panel for specific positions
